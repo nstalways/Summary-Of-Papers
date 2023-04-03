@@ -1,0 +1,22 @@
+-----------------------------------------------------------------------------------------------
+[한 줄 요약] Residual learning으로 더 깊은 모델의 학습을 가능하게 만들었고, 성능 또한 향상시켰다.
+-----------------------------------------------------------------------------------------------
+
+1. motivations
+- 네트워크의 깊이(depth)는 모델 성능에 영향을 미치는 중요한 요소이다.
+- 더 좋은 성능의 모델을 얻기 위해 더 깊은 네트워크를 구현하려는 시도가 있었으나, degradation problem이 발생하며 오히려 성능이 떨어지는 현상이 발생했다.
+- Degradation problem을 해결하여 더 깊은 모델의 학습을 가능하게 만들고, 동시에 성능은 향상시키는 것이 본 연구의 동기라고 생각한다.
+
+2. contributions
+- Residual learning frameworks를 도입함으로써 degradation problem을 어느 정도 해소했다.
+
+3. methods
+- Residual learning frameworks
+- y = F(x, {W_i}) + x -> 이러한 형태의 layer들을 깊게 쌓아준다.
+- Residual learning으로, 모델은 더 이상 identity mapping 과정을 학습하지 않아도 되고, 대신 나머지 값인 F()를 학습하게 된다.
+- Residual learning을 통해 네트워크의 학습 자체가 쉬워지고(하나의 block이 근사해야하는 함수 자체가 쉬워져서라고 생각함),
+전체적으로는 더 복잡한 함수를 근사할 수 있게 된다.
+
+4. results
+- 더 깊은 네트워크의 학습이 가능하게끔 만들었고, 동시에 성능 향상도 이루어냈다.
+- ILSVRC & COCO 2015 competitions 중 ImageNet detection, ImageNet localization, COCO detection, COCO segmentation에서 1등을 수상했다.
