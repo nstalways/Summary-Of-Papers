@@ -1,0 +1,24 @@
+-----------------------------------------------------------------------------------------------
+[한 줄 요약] 
+-----------------------------------------------------------------------------------------------
+
+1. motivations
+- 당시 대부분의 연구는, network가 one-to-one mapping을 수행하도록 만드는 것이었다.
+- 하지만, 사실 많은 문제들은 one-to-many mapping이 가능한 network가 필요했다(e.g. Image Captioning).
+- GAN의 등장으로, 꽤나 괜찮은 one-to-many mapping이 가능하게 되었다.
+- 다만 GAN이 생성하는 이미지는 무작위였기 때문에, 제어가 불가능했다.
+- 본 연구는 이미지 생성 과정에 추가 정보(condition)를 제공함으로써 원하는 조건의 이미지를 생성하고자 했고,
+궁극적으로는 Image Captioning 분야에 이를 활용하고자 했다.
+
+2. contributions
+- 사용자가 준 조건에 따라 이미지를 생성할 수 있도록, conditional GAN을 제안했다.
+
+3. methods
+- Generator와 Discriminator의 입력에 condition y를 추가했다.
+- Latent vector z에 condition y를 concat하여 generator에 입력했다.
+- Training data x에 condition y를 concat하여 discriminator에 입력했다.
+- 목적 함수는 original GAN과 동일하다(Adversarial Loss).
+
+4. results
+- MNIST data에 대해 condition을 줘서 생성해보았더니, non-conditional generative model과 비교했을 때도 준수한 성능을 보였다.
+- 이미지에 적합한 단어들을 tagging하는 task를 수행해보았는데, gt와 유사하면서도 data에 없는 단어들을 tagging할 수 있었다.
