@@ -1,15 +1,23 @@
 -----------------------------------------------------------------------------------------------
-[한 줄 요약] 
+[한 줄 요약] 기존 OCR pipeline의 복잡함을 Neural Net + NMS로 단순화하여 속도/성능 모두 향상시킨 연구
 -----------------------------------------------------------------------------------------------
+EAST: Efficient and Accuracy Scene Text detection pipeline
 
 1. motivations
--
+- 기존 OCR pipeline(2017년 기준)의 복잡함은 추론 속도 및 최적화에 부정적인 영향을 미쳤다.
+- OCR pipeline의 복잡함을 발생시키는 중간 과정들을 2 Stage Pipeline(Neural Net + NMS)으로 단순화하여
+추론 속도 및 성능 향상을 목표로 한 연구이다.
 
 2. contributions
-- 
+- sub-optimal한 중간 과정들을 2 Stage Pipeline으로 단순화 함과 동시에, 성능 및 추론 속도 또한 크게
+향상시켰다.
 
 3. methods
-- 
+- low-level부터 high-level feature를 모두 활용하기 위해 Extractor와 Merging Branch를 사용했으며,
+그렇게 생성한 feature map을 바탕으로 score map, RBOX geometry, QUAD geometry를 예측한다.
+- 예측한 결과값에 후처리를 가함으로써, 하나의 pixel 마다 하나의 bbox를 생성한다.
+- 생성된 bbox의 수가 너무 많기 때문에, locality-aware nms 기법을 도입하여 bbox의 개수를 줄인다.
 
 4. results
-- 
+- Real-time(30 FPS 이상) 수준은 아니지만, 기존 OCR pipeline에 비해 inference 속도를 엄청 올렸으며
+f1 score 또한 큰 향상을 얻을 수 있었다.
