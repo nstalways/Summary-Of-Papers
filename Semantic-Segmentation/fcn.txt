@@ -1,0 +1,16 @@
+-----------------------------------------------------------------------------------------------
+[한 줄 요약] Deep Learning을 활용해 Semantic Segmentation을 연구한 대표적인 논문
+-----------------------------------------------------------------------------------------------
+
+1. motivations
+- 
+
+2. contributions
+- 
+
+3. methods
+- Fully-Convolutional Neural Networks
+- Transposed Convolution
+
+4. results
+- 
