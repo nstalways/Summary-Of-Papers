@@ -31,4 +31,9 @@
 [Deep High-Resolution Representation Learning for Visual Recognition](./hrnetv2.txt), arXiv 2019 [[paper]](https://arxiv.org/abs/1908.07919)
 
 ## 2020
-[UNet 3+: A Full-Scale Connected UNet for Medical Image Segmentation](.unet3+.txt), arXiv 2020 [[paper]](https://arxiv.org/abs/2004.08790)
+[UNet 3+: A Full-Scale Connected UNet for Medical Image Segmentation](./unet3+.txt), arXiv 2020 [[paper]](https://arxiv.org/abs/2004.08790)
+
+[Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers](./setr.txt), arXiv 2020 [[paper]](https://arxiv.org/abs/2012.15840)
+
+## 2021
+[SegFormer: Simple and Efficient Design for Semantic Segmentation with Transformers](./segformer.txt), arXiv 2021 [[paper]](https://arxiv.org/abs/2105.15203)
