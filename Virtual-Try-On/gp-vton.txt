@@ -11,7 +11,7 @@
 2. contributions
 - 사실적인 이미지 생성
 - Local Flow Global Warping(LFGP) module을 통해 상품이 가지고 있는 semantic한 정보들을 보존
-- LFGP modules과 Dynamic Gradient Training(DGT) 전략을 통해 상품 사진의 왜국을 줄임
+- LFGP modules과 Dynamic Gradient Training(DGT) 전략을 통해 상품 사진의 왜곡을 줄임
 
 3. methods
 - 이전 연구들의 global warping modules을 보다 세분화하였다고 느껴짐.
