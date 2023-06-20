@@ -4,4 +4,4 @@
 [TryOnDiffusion: A Tale of Two UNets](./tryondiffusion.txt), CVPR 2023 [[paper]](https://openaccess.thecvf.com/content/CVPR2023/papers/Zhu_TryOnDiffusion_A_Tale_of_Two_UNets_CVPR_2023_paper.pdf) **In-Progress**
 
 ## 2022
-[C-VTON: Context-Driven Image-Based Virtual Try-On Network](./c-vton.txt), WACV 2022 [[paper]](https://openaccess.thecvf.com/content/WACV2022/papers/Fele_C-VTON_Context-Driven_Image-Based_Virtual_Try-On_Network_WACV_2022_paper.pdf) **In-Progress**
+[C-VTON: Context-Driven Image-Based Virtual Try-On Network](./c-vton.txt), WACV 2022 [[paper]](https://openaccess.thecvf.com/content/WACV2022/papers/Fele_C-VTON_Context-Driven_Image-Based_Virtual_Try-On_Network_WACV_2022_paper.pdf)
