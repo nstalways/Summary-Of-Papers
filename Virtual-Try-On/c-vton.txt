@@ -1,15 +1,31 @@
 -----------------------------------------------------------------------------------------------
-[한 줄 요약] 
+[한 줄 요약] BPGM + CAG 모듈 제안 -> 입력되는 사람/상품 이미지의 다양한 특성을 반영해서 생성이
+가능하게끔 만들었음
 -----------------------------------------------------------------------------------------------
 
 1. motivations
-- 
+- 사람 포즈 이미지에 상품 사진을 transfer하는 과정에서 세부 정보들의 손실 발생
+- Parsing 기반의 모델들은 parser의 결과가 잘못됐을 때 이상한 생성 결과가 나타나기에 parser에
+의존도가 너무 높음
+- Parser 의존도를 낮추기 위해 knowledge-distillation 기반 연구도 등장했지만, 결국 teacher 모델에
+parser가 들어가므로 의존도를 낮출 수 있는 정도가 제한적
 
-  2. contributions
-- 
+2. contributions
+- body-segmentaitions만 사용하는 새로운 geometric matching module(BPGM) 제안 -> 여러
+pre-processing steps의 의존도를 낮춤
+- objective functions 설계를 통해 사실적인 생성 이미지를 만들 수 있게끔 함
+- Context-Aware Generator(CAG)를 도입해 사실적인 이미지 생성
 
 3. methods
-- 
+- BPGM 모듈에서는 상품 사진(Target Clothing), denspose로 생성해낸 Body Segmentation Map을 입력받아
+Thin-Plate Spline(TPS) transformation에 필요한 파라미터들을 예측하고, 예측한 TPS 파라미터를
+기반으로 warping된 target clothing을 만듦
+- CAG 모듈에서는 인물 사진 + 상품 사진 + Body Segmentation Map과 BPGM에서 만든 warped target
+clothing을 입력받아 Try-On 이미지를 생성
 
 4. results
-- 
+- Try-On 이미지를 생성할 때 팔이나 손 부분의 퀄리티가 이전 연구 대비 높아졌으며, target clothing의
+그래픽이나 재질 등의 속성을 더 잘 반영함.
+- limitations으로는 인물 사진 속 옷 영역을 마스킹하는 과정에서 발생하는 문제(마스킹 과정 자체의 문제
+혹은 사진 속 인물이 loose한 옷을 입어서 체형 자체를 가져올 수 없는 문제)나 target clothing의 앞/뒤를
+구분할 수 없는 경우 생성 결과가 이상하다고 함.
