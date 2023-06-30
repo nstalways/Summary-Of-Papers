@@ -1,0 +1,25 @@
+-----------------------------------------------------------------------------------------------
+[한 줄 요약] BPGM + CAG 모듈 제안 -> 입력되는 사람/상품 이미지의 다양한 특성을 반영해서 생성이
+가능하게끔 만들었음
+-----------------------------------------------------------------------------------------------
+
+1. motivations
+- 2D 이미지 기반 virtual try on 분야의 이전 연구들은 target clothing item을 사람의 몸에 맞추는
+warping 과정과 사람의 몸에 대한 segmentation map을 얻는 방식으로 문제를 해결하고자 하였음.
+- 허나 warping과 segmentation 과정을 독립적으로 수행하다보니, 정보 교환이 없어 옷과 사람 간의
+mis-alignment가 발생해 최종 생성 결과에 artifacts가 나타나는 현상이 관측되었음.
+- 이러한 mis-alignment를 해결하고자 연구를 시작함.
+
+2. contributions
+- warping 결과와 segmentation map을 동시에 예측하는 새로운 아키텍처 제시 -> 동시 예측 및 feature
+fusion 과정을 통해 상호간의 정보를 교환
+- discriminator rejection 기법을 도입 -> mis-alignment를 유발하는 잘못된 segmentation map 예측을
+방지
+- 위 두 가지 기법을 통해 mis-alignment 및 pixel-squeezing 문제를 해결하였으며, 1024 x 768 이라는
+고해상도 이미지에 대해 높은 품질의 try-on 결과를 생성하였음.
+
+3. methods
+- 
+
+4. results
+- 
